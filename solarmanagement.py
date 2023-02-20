@@ -1,8 +1,10 @@
 import solaredge
 import sys
+import os
 
 def main() -> int:
-    API_KEY=""
+
+    API_KEY = os.getenv('SOLAR_EDGE_API')
     site_id = 3415476
 
     device = solaredge.Solaredge(API_KEY)
